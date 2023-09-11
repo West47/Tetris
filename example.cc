@@ -177,9 +177,6 @@ bool ChildWindow::proverka(int n)
    	            {
    	            if ((game[i][j+30]!=ti)&&(game[i][j+30]!=-1))
    	                return false;
-   	            //if ((game[i][j+30]!=ti)&&(game[i][j+60]!=-1))
-   	            	//ff=1;
-   	            //if ((buff[i][j+60]==ti)&&(buff[i][j]))
    	        	}
    	        }
    	    if (ff)
@@ -218,7 +215,6 @@ bool ChildWindow::proverka(int n)
 	   	            	else
 	   	            		if ((figure[(i+30)/30][j/30]!=ti)&&(figure[(i+30)/30][j/30]!=-1))
 	   	                		return false;
-	   	            //if ((buff[i][j+60]==ti)&&(buff[i][j]))
 	   	        	}
 	   	        }
 	   	        
@@ -300,12 +296,10 @@ void ChildWindow::Figure()
 	ti = ti%10;
 	if (ti>5)
 		ti = 9-ti;
-	//ti=5;
 	switch (ti)
 	{
 		case 0:
 		{
-			//figure[5][0]=6;
 			mass[0][4]=6;
 			ti=7;
 			break;				
@@ -316,12 +310,6 @@ void ChildWindow::Figure()
 			mass[1][1]=1;
 			mass[0][0]=1;
 			mass[0][1]=1;
-			/*
-			figure[4][0]=1;
-			figure[4][1]=1;
-			figure[5][0]=1;
-			figure[5][1]=1;
-			*/
 			break;
 			}
 			
@@ -336,17 +324,6 @@ void ChildWindow::Figure()
 			mass[2][0]=2;
 			mass[2][1]=2;
 			mass[2][2]=2;
-		/*
-			figure[4][0]=2;
-			figure[4][1]=2;
-			figure[4][2]=2;
-			figure[5][0]=2;
-			figure[5][1]=2;
-			figure[5][2]=2;
-			figure[6][0]=2;
-			figure[6][1]=2;
-			figure[6][2]=2;
-        */
 			break;
 			}
 			
@@ -356,13 +333,6 @@ void ChildWindow::Figure()
  			mass[0][1]=3;
  			mass[0][2]=3;
  			mass[0][3]=3;
- 			
- 		/*
- 			figure[4][0]=3;
- 			figure[5][0]=3;
- 			figure[6][0]=3;
- 			figure[7][0]=3;
-	*/
 			break;
 		}
 		case 4 :
@@ -372,13 +342,6 @@ void ChildWindow::Figure()
 			mass[0][2]=4;
 			mass[1][0]=4;
 			mass[2][0]=4;
-        /*
- 			figure[4][0]=4;
- 			figure[5][0]=4;
- 			figure[6][0]=4;
- 			figure[6][1]=4;
- 			figure[6][2]=4;
- 			*/
 			break;
 			}		
 		case 5:
@@ -387,12 +350,6 @@ void ChildWindow::Figure()
 			mass[0][1]=5;
 			mass[1][1]=5;
 			mass[0][2]=5;
-		/*
-			figure[5][0]=5;
- 			figure[5][1]=5;
- 			figure[4][1]=5;
- 			figure[5][2]=5;
-		*/
 			break;
 			}
 		case 6:
@@ -401,12 +358,6 @@ void ChildWindow::Figure()
 			mass[0][1]=7;
 			mass[1][1]=7;
 			mass[1][2]=7;
-		/*
-			figure[5][0]=7;
- 			figure[5][1]=7;
- 			figure[4][1]=7;
- 			figure[4][2]=7;
-*/
 			break;
 			}	
 		//ReDraw();
@@ -1035,9 +986,6 @@ bool ChildWindow::motion(int way)
         	return false;
         	
         	}
-        //if (buf[3][l-1]==15)
-        	//buf[3][l-1]=14;
-        //buf[3][l - 1] -= 1;
         for (i=0;i<4;i+=1)
         {
         	for (j=0;j<4;j+=1)

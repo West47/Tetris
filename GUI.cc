@@ -213,24 +213,6 @@ gboolean GtkPlus::ButtonPressEvent(GtkWidget *widget, GdkEventButton *event)
 gboolean GtkPlus::KeyPressEvent(GtkWidget *widget, GdkEvent *event)
 {
     assert(m_Widget == widget);
-    /*
-    uint32_t type;
-    int k;
-    k=getchar();
-    switch (event->key.keyval)
-    {
-    	case 'a':
-    		std::cout << "ChildWindow::OnDraw()" << 'L' <<std::endl;
-    		break;
-    		
-    	case 's':
-    		std::cout << "ChildWindow::OnDraw()" << 'D' <<std::endl;
-    		break;
-    	case 'd':
-    		std::cout << "ChildWindow::OnDraw()" << 'R' <<std::endl;
-    		break;
-    }
-    */
     return NotifyWindow(EVENT_KEYPRESS, Point(0,0),event->key.keyval);
 }
 
